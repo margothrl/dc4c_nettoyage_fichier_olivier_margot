@@ -18,8 +18,7 @@ import pandas as pd
 df = pd.read_csv("test.csv") 
 df = df[df.Series_title_2.isin(["Credit", "Debit", "Services"])] 
 df.insert(0, "id", range(1, len(df)+1)) 
-print(df) # afficher le résultat
-
+df.to_csv("test.csv", index=False)
 
 #Étape 4 : supprimer toutes les lignes ayant au moins une cellule vide
 #df = pd.read_csv("test.csv").dropna()
