@@ -21,7 +21,9 @@ import pandas as pd
 #df.to_csv("test.csv", index=False)
 
 #Étape 4 : supprimer toutes les lignes ayant au moins une cellule vide
-df = pd.read_csv("test.csv").dropna()
-df.to_csv("test.csv", index=False)
+#df = pd.read_csv("test.csv").dropna()
+#df.to_csv("test.csv", index=False)
 
 #Étape 5 : écrire le nouveau jeu de donnée dans un fichier result.csv
+df = pd.read_csv("test.csv") 
+df.to_csv("result.csv", index=False)
