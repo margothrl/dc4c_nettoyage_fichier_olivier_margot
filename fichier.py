@@ -10,13 +10,16 @@ import pandas as pd
 #df.to_csv("test.csv", index=False)
 
 #Étape 2 : filtrer les résultats en ne gardant que les résultats avec Credit, Debit et Services dans la colonne Series_title_2
-
-import pandas as pd
-df = pd.read_csv("test.csv")
-df = df[df.Series_title_2.isin(["Credit", "Debit", "Services"])]
-df.to_csv("test.csv", index=False)
+#df = pd.read_csv("test.csv")
+#df = df[df.Series_title_2.isin(["Credit", "Debit", "Services"])]
+#df.to_csv("test.csv", index=False)
 
 #Étape 3 : ajouter une colonne id, auto-incrémenté
+df = pd.read_csv("test.csv") 
+df = df[df.Series_title_2.isin(["Credit", "Debit", "Services"])] 
+df.insert(0, "id", range(1, len(df)+1)) 
+print(df) # afficher le résultat
+
 
 #Étape 4 : supprimer toutes les lignes ayant au moins une cellule vide
 #df = pd.read_csv("test.csv").dropna()
