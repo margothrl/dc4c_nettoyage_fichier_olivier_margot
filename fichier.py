@@ -12,9 +12,9 @@ import pandas as pd
 #Étape 2 : filtrer les résultats en ne gardant que les résultats avec Credit, Debit et Services dans la colonne Series_title_2
 
 import pandas as pd
-df = pd.read_csv("test.csv") # lire le fichier csv
-df = df[df.Series_title_2.isin(["Credit", "Debit", "Services"])] # filtrer les lignes qui contiennent ces valeurs
-print(df) # afficher le résultat
+df = pd.read_csv("test.csv")
+df = df[df.Series_title_2.isin(["Credit", "Debit", "Services"])]
+df.to_csv("test.csv", index=False)
 
 #Étape 3 : ajouter une colonne id, auto-incrémenté
 
