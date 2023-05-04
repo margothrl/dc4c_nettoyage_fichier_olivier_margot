@@ -15,13 +15,14 @@ import pandas as pd
 #df.to_csv("test.csv", index=False)
 
 #Étape 3 : ajouter une colonne id, auto-incrémenté
-df = pd.read_csv("test.csv") 
-df = df[df.Series_title_2.isin(["Credit", "Debit", "Services"])] 
-df.insert(0, "id", range(1, len(df)+1)) 
-df.to_csv("test.csv", index=False)
+#df = pd.read_csv("test.csv") 
+#df = df[df.Series_title_2.isin(["Credit", "Debit", "Services"])] 
+#df.insert(0, "id", range(1, len(df)+1)) 
+#df.to_csv("test.csv", index=False)
 
 #Étape 4 : supprimer toutes les lignes ayant au moins une cellule vide
-#df = pd.read_csv("test.csv").dropna()
+df = pd.read_csv("test.csv").dropna()
+print(df)
 #df.to_csv("test.csv", index=False)
 
 #Étape 5 : écrire le nouveau jeu de donnée dans un fichier result.csv
